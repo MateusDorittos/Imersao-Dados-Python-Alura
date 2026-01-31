@@ -1,2 +1,2 @@
-# Imers-o-Dados-Python-Alura
+# Imersao-Dados-Python-Alura
 Dashboard de Análise de Salários na Área de Dados
