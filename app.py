@@ -79,6 +79,7 @@ with col_graf1:
             orientation='h',
             title="Top 10 cargos por salário médio",
             labels={'usd': 'Média salarial anual (USD)', 'cargo': ''},
+            color_discrete_sequence=['#8A2BE2']
         )
         grafico_cargos.update_layout(title_x=0.1, yaxis={'categoryorder':'total ascending'})
         st.plotly_chart(grafico_cargos, use_container_width=True)
@@ -93,6 +94,7 @@ with col_graf2:
             nbins=30,
             title="Distribuição de salários anuais",
             labels={'usd': 'Faixa salarial (USD)', 'count': ''},
+            color_discrete_sequence=['#8A2BE2']
         )
         grafico_hist.update_layout(title_x=0.1)
         st.plotly_chart(grafico_hist, use_container_width=True)
@@ -111,6 +113,7 @@ with col_graf3:
             values='quantidade',
             title='Proporção dos tipos de trabalho',
             hole=0.5,
+            color_discrete_sequence=['#4B0082', '#8A2BE2', '#E6E6FA']
         )
         grafico_remoto.update_traces(textinfo='percent+label')
         grafico_remoto.update_layout(title_x=0.1)
@@ -125,7 +128,7 @@ with col_graf4:
         grafico_paises = px.choropleth(media_ds_pais,
             locations='residencia_iso3',
             color='usd',
-            color_continuous_scale='rdylgn',
+            color_continuous_scale='purp',
             title='Salário médio de Cientista de Dados por país',
             labels={'usd': 'Salário médio (USD)', 'residencia_iso3': 'País'})
         grafico_paises.update_layout(title_x=0.1)
